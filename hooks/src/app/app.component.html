@@ -4,6 +4,11 @@
     <button (click)="increment()">Increment</button>
     <button (click)="decrement()">Decrement</button>
     <button (click)="add()">Add</button>
-    <app-child [myCounter]="counter" [secondValue]="secondValue" [numbers]="numbers"></app-child>
+    <button (click)="inVisible()">show/hide</button>
+    <app-child [myCounter]="number" [secondValue]="secondValue" [numbers]="numbers" *ngIf="hide">
+      <h1>
+        Hello this is from parent component
+      </h1>
+    </app-child>
   </div>
 </div>
